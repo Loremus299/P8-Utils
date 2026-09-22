@@ -1,6 +1,20 @@
 pico-8 cartridge // http://www.pico-8.com
 version 43
 __lua__
+-- Basic starter template
+function template()
+  function _init()
+  end
+
+  function _update()
+  end
+
+  function _draw()
+    cls(1)
+  end
+end
+
+-- Basic collision function between object and flag
 function collide(o, f)
   -- o = {x, y, w. h}
   -- f = flag number
