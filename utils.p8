@@ -15,6 +15,7 @@ function template()
 end
 
 -- onClick function --
+
 -- k = 0,1,2,3 4,5
 -- f = function to run
 function onClick(k, f)
