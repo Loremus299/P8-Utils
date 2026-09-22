@@ -26,7 +26,7 @@ end
 
 -- Basic collision function between object and flag --
 
--- o = {x, y, w, h}
+-- o = {x, y, w (tile), h (tile)}
 -- f = flag number
 function collide(o, f)
   local tx = flr(o.x / 8)
@@ -34,12 +34,10 @@ function collide(o, f)
   local tw = flr((o.x + o.w * 8 - 1) / 8)
   local th = flr((o.y + o.h * 8 - 1) / 8)
 
-  local a = fget(mget(tx, ty), f)
-  local b = fget(mget(tw, ty), f)
-  local c = fget(mget(tx, th), f)
-  local d = fget(mget(tw, th), f)
-
-  return (a or b or c or d)
+  return fget(mget(tx, ty), f)
+      or fget(mget(tw, ty), f)
+      or fget(mget(tx, th), f)
+      or fget(mget(tw, th), f)
 end
 
 __gfx__
