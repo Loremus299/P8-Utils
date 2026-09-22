@@ -35,16 +35,6 @@ function onDown(k, f)
   end
 end
 
--- onClick function --
-
--- k = 0,1,2,3 4,5
--- f = function to run
-function onClick(k, f)
-  if btnp(k) then
-    f()
-  end
-end
-
 -- Basic collision function between object and flag --
 
 -- o = {x, y, w (tile), h (tile)}
