@@ -9,12 +9,12 @@ function collide(o, f)
   local tw = flr((o.x + o.w * 8 - 1) / 8)
   local th = flr((o.y + o.h * 8 - 1) / 8)
 
-  local a = fget(mget(tx, ty))
-  local b = fget(mget(tw, ty))
-  local c = fget(mget(tx, th))
-  local d = fget(mget(tw, th))
+  local a = fget(mget(tx, ty), f)
+  local b = fget(mget(tw, ty), f)
+  local c = fget(mget(tx, th), f)
+  local d = fget(mget(tw, th), f)
 
-  return (a == f or b == f or c == f or d == f)
+  return (a or b or c or d)
 end
 
 __gfx__
