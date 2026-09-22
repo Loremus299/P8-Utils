@@ -14,6 +14,16 @@ function template()
   end
 end
 
+-- Copy Table --
+-- o = any table
+function copyTable(o)
+  local copy = {}
+  for key, value in pairs(o) do
+    copy[key] = value
+  end
+  return copy
+end
+
 -- onDown function --
 
 -- k = 0,1,2,3 4,5
