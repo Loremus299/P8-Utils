@@ -1,7 +1,7 @@
 pico-8 cartridge // http://www.pico-8.com
 version 43
 __lua__
--- Basic starter template
+-- Basic starter template --
 function template()
   function _init()
   end
@@ -14,19 +14,20 @@ function template()
   end
 end
 
--- onClick function
+-- onClick function --
+-- k = 0,1,2,3 4,5
+-- f = function to run
 function onClick(k, f)
-  -- k = 0,1,2,3 4,5
-  -- f = function to run
   if btn(k) then
     f()
   end
 end
 
--- Basic collision function between object and flag
+-- Basic collision function between object and flag --
+
+-- o = {x, y, w, h}
+-- f = flag number
 function collide(o, f)
-  -- o = {x, y, w. h}
-  -- f = flag number
   local tx = flr(o.x / 8)
   local ty = flr(o.y / 8)
   local tw = flr((o.x + o.w * 8 - 1) / 8)
