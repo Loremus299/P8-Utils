@@ -15,6 +15,7 @@ function template()
 end
 
 -- Copy Table --
+
 -- o = any table
 function copyTable(o)
   local copy = {}
