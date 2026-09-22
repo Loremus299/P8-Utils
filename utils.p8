@@ -14,6 +14,15 @@ function template()
   end
 end
 
+-- onClick function
+function onClick(k, f)
+  -- k = 0,1,2,3 4,5
+  -- f = function to run
+  if btn(k) then
+    f()
+  end
+end
+
 -- Basic collision function between object and flag
 function collide(o, f)
   -- o = {x, y, w. h}
