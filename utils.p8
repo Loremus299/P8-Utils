@@ -14,12 +14,22 @@ function template()
   end
 end
 
+-- onDown function --
+
+-- k = 0,1,2,3 4,5
+-- f = function to run
+function onDown(k, f)
+  if btn(k) then
+    f()
+  end
+end
+
 -- onClick function --
 
 -- k = 0,1,2,3 4,5
 -- f = function to run
 function onClick(k, f)
-  if btn(k) then
+  if btnp(k) then
     f()
   end
 end
