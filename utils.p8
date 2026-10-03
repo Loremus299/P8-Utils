@@ -34,3 +34,12 @@ function collide(o, sd, f)
       or fget(mget(tx, th), f)
       or fget(mget(tw, th), f)
 end
+
+-- keyframe based animation function
+-- o = { anims, animState, animIndex }
+-- anims = { animName, array of frames }
+function animate(o)
+  local currentAnim = o.anims[o.animState]
+  o.animIndex = (o.animIndex % #currentAnim.sprs) + 1
+  o.spr = currentAnim.sprs[o.animIndex]
+end
