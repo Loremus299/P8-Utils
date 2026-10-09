@@ -18,11 +18,13 @@ SceneData = {
   mapY = 0
 }
 
+basicObject = {
+  x = 0, y = 0,
+  w = 1, h = 1
+}
+
 visibleObject = {
   spr = 0,
-
-  x = 0, y = 0,
-  w = 1, h = 1,
   fx = false, fy = false,
 
   animState = "",
