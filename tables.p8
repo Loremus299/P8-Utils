@@ -18,7 +18,7 @@ SceneData = {
   mapY = 0
 }
 
-renderable = {
+visibleObject = {
   spr = 0,
 
   x = 0, y = 0,
@@ -33,13 +33,11 @@ renderable = {
   }
 }
 
-physicsBody = {
-  x = 0, y = 0,
-  w = 1, h = 1,
+PhysicsObject = {
   dx = 0, dy = 0,
   mdx = 1, mdy = 1
 }
 
-interactions = {
+interactiveObject = {
   ax = 0, ay = 0
 }
